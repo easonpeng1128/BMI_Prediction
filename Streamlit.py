@@ -182,7 +182,7 @@ def bmi_interpretation(bmi):
 
 # UI design
 st.markdown("<h1 style='text-align: center; color: #800020;'>Predict Your BMI Live</h1>", unsafe_allow_html=True)
-ctx = webrtc_streamer(key="example", video_transformer_factory=VideoProcessor, sendback_audio=False) # Add a title and a brief introduction.
+ctx = webrtc_streamer(key="abc", video_transformer_factory=VideoProcessor, sendback_audio=False, rtc_configuration={'iceServers': get_ice_servers()})
 st.title("Live BMI Prediction")
 st.write("""
 Welcome to the live BMI prediction app! Here, you can use your webcam to capture an image and the application will predict your Body Mass Index (BMI). 
